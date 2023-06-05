@@ -7,3 +7,15 @@ export const getOrders = async () => {
 	const result = await response.json();
 	return result;
 };
+
+export const getOrderInfo = async (id: string) => {
+	const response = await fetch(`${BASE_URL}/orders/${id}`);
+	const result = await response.json();
+	return result;
+};
+
+export const getCriterias = async () => {
+	const response = await fetch(`${BASE_URL}/criterias`);
+	const result = await response.json();
+	return result;
+};
